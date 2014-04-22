@@ -1,0 +1,11 @@
+<h1>Welcome to store selling MyStuff </h1>
+<!-- Re-styled using inline styles -->
+<% @sale_items.each do |item| %>
+  <div class="entry" style="color:blue;font-size:5em">
+    <p><%= item.name %><br/>
+		<!-- Displays price in correct currency format (with a $) -->
+      <span class="price" style="color:green;font-weight:bold"><%= number_to_currency(item.price) %></span><br/>
+	  <span class="cat" style="color:green"><%= item.item_type %></span>
+	 </p>
+  </div>
+<% end %>
